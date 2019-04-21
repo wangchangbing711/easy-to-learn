@@ -1,19 +1,32 @@
 <template>
   <div id="app">
-    <slide-video></slide-video>
-    <slide-span></slide-span>
+    <div style="height: 500px">
+      <slide-video></slide-video>
+      <slide-span></slide-span>
+    </div>
+    <toolbar></toolbar>
+    <!--<player></player>-->
+    <div id="card" >
+         <card></card>
+    </div>
   </div>
 </template>
 
 <script>
-import slideVideo from './components/slidevideo'
-import slidespan from './components/slidespan'
+import slideVideo from './components/slidephoto/slidevideo'
+import slidespan from './components/slidephoto/slidespan'
+import toolbar from './components/toobar'
+import player from './components/videolist/player'
+import card from './components/card/card'
 
 export default {
   name: 'app',
   components: {
      'slide-video': slideVideo,
-      'slide-span':slidespan
+      'slide-span':slidespan,
+      'toolbar':toolbar,
+      'player':player,
+      'card':card
   }
 }
 </script>
@@ -26,4 +39,7 @@ export default {
   padding: 0;
   margin: 0;
 }
+  #card{
+    height: 1000px;
+  }
 </style>
